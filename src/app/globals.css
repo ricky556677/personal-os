@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #07080a;
+  --color-surface-100: #101111;
+  --color-surface-card: #1b1c1e;
+  --color-text-primary: #f9f9f9;
+  --color-text-secondary: #cecece;
+  --color-text-muted: #9c9c9d;
+  --color-text-disabled: #6a6b6c;
+  --color-border: #252829;
+  --color-border-dark: #2f3031;
+  --color-brand-red: #FF6363;
+  --color-brand-blue: #55b3ff;
+  --color-brand-green: #5fc992;
+  --color-button-fg: #18191a;
+  --color-key-start: #121212;
+  --color-key-end: #0d0d0d;
+
+  --font-sans: "Inter", "Inter Fallback", system-ui, -apple-system, sans-serif;
+  --font-mono: "GeistMono", "ui-monospace", SFMono-Regular, "Roboto Mono", Menlo, monospace;
+
+  --radius-micro: 2px;
+  --radius-key: 4px;
+  --radius-work: 6px;
+  --radius-input: 8px;
+  --radius-card: 12px;
+  --radius-large: 16px;
+  --radius-hero: 20px;
+  --radius-pill: 86px;
+
+  --spacing-section: 120px;
+  --spacing-section-sm: 80px;
+
+  --max-w-container: 1200px;
+
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #07080a;
+  color: #f9f9f9;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.60;
+  letter-spacing: 0.2px;
+  font-feature-settings: "calt" 1, "kern" 1, "liga" 1, "ss03" 1;
+}
+
+.display-text {
+  font-feature-settings: "calt" 1, "kern" 1, "liga" 0, "ss02" 1, "ss08" 1;
+}
+
+code, .font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: normal;
+}
+
+::selection {
+  background-color: rgba(255, 99, 99, 0.3);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.06) 20%,
+    rgba(255, 255, 255, 0.06) 80%,
+    transparent
+  );
+}
